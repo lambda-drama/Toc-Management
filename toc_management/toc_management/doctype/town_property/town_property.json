@@ -10,7 +10,9 @@
   "column_break_gahw",
   "customer",
   "is_active",
-  "management_agreement"
+  "management_agreement",
+  "property_details_section",
+  "property"
  ],
  "fields": [
   {
@@ -50,12 +52,23 @@
    "fieldname": "management_agreement",
    "fieldtype": "Date",
    "label": "Management Agreement"
+  },
+  {
+   "fieldname": "property_details_section",
+   "fieldtype": "Section Break",
+   "label": "Property Details"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Table",
+   "label": "Property",
+   "options": "Property Unit"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-24 13:47:34.886548",
+ "modified": "2025-10-24 15:23:52.407488",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Town Property",

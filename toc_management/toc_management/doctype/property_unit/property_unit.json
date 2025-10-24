@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-24 15:18:15.173662",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_no",
+  "bedrooms",
+  "size_m2",
+  "column_break_swgs",
+  "status",
+  "current_tenant",
+  "section_break_uajq",
+  "rent_amount",
+  "column_break_iviz",
+  "deposit_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Unit No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bedrooms",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Bedrooms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "size_m2",
+   "fieldtype": "Data",
+   "label": "Size M2"
+  },
+  {
+   "fieldname": "column_break_swgs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nVacant\nOccupied\nOnhold\nUnder Repair"
+  },
+  {
+   "fieldname": "current_tenant",
+   "fieldtype": "Data",
+   "label": "Current Tenant"
+  },
+  {
+   "fieldname": "section_break_uajq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Rent Amount"
+  },
+  {
+   "fieldname": "column_break_iviz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Deposit Amount"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-24 15:23:06.198022",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Property Unit",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
