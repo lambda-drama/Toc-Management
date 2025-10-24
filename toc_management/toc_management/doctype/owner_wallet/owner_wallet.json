@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-24 15:01:01.971963",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "owner_wallet",
+  "balance",
+  "column_break_zyoc",
+  "last_settled_on",
+  "section_break_xduy",
+  "transactions"
+ ],
+ "fields": [
+  {
+   "fieldname": "owner_wallet",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Owner Wallet",
+   "reqd": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Balance",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zyoc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_settled_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Last Settled On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_xduy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "transactions",
+   "fieldtype": "Table",
+   "label": "Transactions",
+   "options": "Owner Wallet Detail"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-24 15:11:55.717161",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Owner Wallet",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

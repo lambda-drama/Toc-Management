@@ -1,0 +1,116 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-24 14:48:15.743994",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "ref_type",
+  "ref_no",
+  "unit",
+  "column_break_txpz",
+  "property",
+  "rental_owner",
+  "section_break_nqva",
+  "commission_rate",
+  "commission_amount",
+  "column_break_kylz",
+  "invoice",
+  "satus"
+ ],
+ "fields": [
+  {
+   "fieldname": "ref_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Ref Type",
+   "options": "\nRental Payment\nLetting",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ref_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Ref No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "column_break_txpz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Town Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_owner",
+   "fieldtype": "Date",
+   "label": "Rental Owner"
+  },
+  {
+   "fieldname": "section_break_nqva",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate"
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount"
+  },
+  {
+   "fieldname": "column_break_kylz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "satus",
+   "fieldtype": "Select",
+   "label": "Satus",
+   "options": "\nPaid\nUnpaid"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-24 14:51:49.557726",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Commission Ledger",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

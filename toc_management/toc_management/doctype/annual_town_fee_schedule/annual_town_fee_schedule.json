@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-24 13:59:37.906610",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fiscal_year",
+  "column_break_iisg",
+  "base_amount",
+  "section_break_pvby",
+  "commercial_factor",
+  "per_unit_addon",
+  "column_break_zyop",
+  "residential_factor",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Fiscal Year",
+   "options": "Fiscal Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iisg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Base Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_pvby",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commercial_factor",
+   "fieldtype": "Data",
+   "label": "Commercial factor"
+  },
+  {
+   "fieldname": "per_unit_addon",
+   "fieldtype": "Data",
+   "label": "Per Unit Addon"
+  },
+  {
+   "fieldname": "column_break_zyop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "residential_factor",
+   "fieldtype": "Data",
+   "label": "Residential Factor"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-24 14:01:30.513730",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Annual Town Fee Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

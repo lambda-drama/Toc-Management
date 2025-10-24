@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-24 14:31:27.267239",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "property",
+  "column_break_xjrd",
+  "unit",
+  "section_break_jdvz",
+  "start_date",
+  "column_break_jwin",
+  "end_date",
+  "section_break_ijig",
+  "commission_scheme",
+  "flat_fee",
+  "column_break_erxb",
+  "_of_rent"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Town Property"
+  },
+  {
+   "fieldname": "column_break_xjrd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "section_break_jdvz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "column_break_jwin",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "section_break_ijig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "commission_scheme",
+   "fieldtype": "Select",
+   "label": "Commission Scheme",
+   "options": "\nFlat\nTiered\n% of Monthly Rent"
+  },
+  {
+   "fieldname": "flat_fee",
+   "fieldtype": "Currency",
+   "label": "Flat Fee"
+  },
+  {
+   "fieldname": "column_break_erxb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "_of_rent",
+   "fieldtype": "Percent",
+   "label": "% of Rent"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-24 14:35:31.210095",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Letting Mandate",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
