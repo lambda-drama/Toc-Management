@@ -5,39 +5,36 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "ticket_no",
   "property",
   "column_break_chis",
-  "unit",
   "customer",
   "section_break_uwye",
   "category",
   "priority",
   "column_break_sbay",
   "status",
+  "labour_section",
+  "role",
+  "hours",
+  "column_break_idur",
+  "rate",
   "section_break_yluc",
   "items",
-  "section_break_kred",
-  "description",
   "section_break_rcpv",
   "estimated_cost",
   "work_order",
   "column_break_hqsp",
   "approval_required",
-  "aproved_by"
+  "aproved_by",
+  "section_break_kred",
+  "description"
  ],
  "fields": [
-  {
-   "fieldname": "ticket_no",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Ticket No",
-   "reqd": 1
-  },
   {
    "fieldname": "property",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Property",
    "options": "Town Property",
    "reqd": 1
@@ -47,16 +44,11 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "unit",
-   "fieldtype": "Date",
-   "in_list_view": 1,
-   "label": "Unit",
-   "reqd": 1
-  },
-  {
+   "fetch_from": "property.customer",
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Customer",
    "options": "Customer",
    "reqd": 1
@@ -73,8 +65,9 @@
   },
   {
    "fieldname": "priority",
-   "fieldtype": "Data",
-   "label": "Priority"
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "\nNormal\nEmergency"
   },
   {
    "fieldname": "column_break_sbay",
@@ -84,7 +77,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nActive"
+   "options": "\nAccepted\nDeclined\nExecuted\nPaid"
   },
   {
    "fieldname": "section_break_kred",
@@ -134,15 +127,40 @@
    "fieldtype": "Table",
    "label": "Items",
    "options": "Service Request Detail"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "labour_section",
+   "fieldtype": "Section Break",
+   "label": "Labour"
+  },
+  {
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "label": "Role"
+  },
+  {
+   "fieldname": "hours",
+   "fieldtype": "Float",
+   "label": "Hour(s)"
+  },
+  {
+   "fieldname": "column_break_idur",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-24 14:19:36.379655",
+ "modified": "2025-10-25 11:49:48.054194",
  "modified_by": "Administrator",
  "module": "Toc Management",
- "name": "Service Request",
+ "name": "Services On Demand",
  "owner": "Administrator",
  "permissions": [
   {

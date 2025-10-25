@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:OW-{YY}-{####}",
  "creation": "2025-10-24 15:01:01.971963",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -15,9 +16,10 @@
  "fields": [
   {
    "fieldname": "owner_wallet",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Owner Wallet",
+   "options": "Customer",
    "reqd": 1
   },
   {
@@ -53,10 +55,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-24 15:11:55.717161",
+ "modified": "2025-10-25 13:39:22.205155",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Owner Wallet",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

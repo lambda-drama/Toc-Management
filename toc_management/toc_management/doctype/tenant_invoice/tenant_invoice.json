@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-25 12:55:43.204234",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rental_contract",
+  "tenant",
+  "property",
+  "column_break_kzwe",
+  "unit",
+  "start_date",
+  "end_date",
+  "item_section",
+  "rental_invoice_items",
+  "amount_breakdown_section",
+  "gross_amount",
+  "column_break_hgad",
+  "commission",
+  "column_break_zybq",
+  "net_amount",
+  "section_break_dhis",
+  "status"
+ ],
+ "fields": [
+  {
+   "fetch_from": "rental_contract.tenant",
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Town Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_kzwe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property Type",
+   "options": "Unit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "rental_contract",
+   "fieldtype": "Link",
+   "label": "Rental Contract",
+   "options": "Rental Contract",
+   "reqd": 1
+  },
+  {
+   "fieldname": "item_section",
+   "fieldtype": "Section Break",
+   "label": "Item"
+  },
+  {
+   "fieldname": "rental_invoice_items",
+   "fieldtype": "Table",
+   "label": "Rental Invoice Items",
+   "options": "Tenant Invoice Detail"
+  },
+  {
+   "fieldname": "amount_breakdown_section",
+   "fieldtype": "Section Break",
+   "label": "Amount Breakdown"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "label": "Gross Amount"
+  },
+  {
+   "fieldname": "column_break_hgad",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Currency",
+   "label": "Commission"
+  },
+  {
+   "fieldname": "column_break_zybq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount"
+  },
+  {
+   "fieldname": "section_break_dhis",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPaid\nUnpaid\nPartial Paid"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-25 13:26:20.981995",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Tenant Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

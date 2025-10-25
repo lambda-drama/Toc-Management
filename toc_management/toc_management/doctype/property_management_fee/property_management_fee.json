@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-25 10:41:30.748747",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_gpll",
+  "amended_from",
+  "start_date",
+  "column_break_zzil",
+  "end_date",
+  "unity_type",
+  "section_break_jtrd",
+  "fee_basis",
+  "monthly_fee",
+  "column_break_fhmp",
+  "_of_rent",
+  "letting_fee"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_gpll",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property Management Fee",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_zzil",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_jtrd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "fee_basis",
+   "fieldtype": "Currency",
+   "label": "Fee Basis"
+  },
+  {
+   "fieldname": "monthly_fee",
+   "fieldtype": "Currency",
+   "label": "Monthly Fee"
+  },
+  {
+   "fieldname": "column_break_fhmp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "_of_rent",
+   "fieldtype": "Percent",
+   "label": "% of Rent"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property Management Fee",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "unity_type",
+   "fieldtype": "Link",
+   "label": "Unity Type",
+   "options": "Unit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "letting_fee",
+   "fieldtype": "Currency",
+   "label": "Letting Fee"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-25 10:51:02.688835",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Property Management Fee",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

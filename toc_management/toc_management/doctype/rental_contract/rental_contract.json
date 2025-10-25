@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:RC-{YY}-{####}",
  "creation": "2025-10-24 14:36:42.172418",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,10 +10,15 @@
   "property",
   "column_break_kzwe",
   "unit",
+  "contract_type",
+  "is_active",
   "section_break_yawh",
   "frequency",
+  "rent_amount",
   "column_break_gicx",
   "deposit_amount",
+  "initial_commission",
+  "renewal_commission",
   "section_break_zqot",
   "start_date",
   "collect_through_toc",
@@ -42,33 +48,38 @@
   },
   {
    "fieldname": "unit",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Unit",
+   "label": "Property Type",
+   "options": "Unit Type",
    "reqd": 1
   },
   {
    "fieldname": "section_break_yawh",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Collection Fee"
   },
   {
    "fieldname": "frequency",
    "fieldtype": "Select",
    "label": "Frequency",
-   "options": "\nMonthly\nQuarterly"
+   "options": "\nMonthly\nQuarterly",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_gicx",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval: doc.contract_type==\"Initial\"",
    "fieldname": "deposit_amount",
    "fieldtype": "Currency",
    "label": "Deposit Amount"
   },
   {
    "fieldname": "section_break_zqot",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Duration"
   },
   {
    "fieldname": "start_date",
@@ -89,15 +100,51 @@
    "fieldname": "collect_through_toc",
    "fieldtype": "Check",
    "label": "Collect Through Toc"
+  },
+  {
+   "fieldname": "rent_amount",
+   "fieldtype": "Currency",
+   "label": "Rent Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "\nInitial\nRenewal",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval: doc.contract_type==\"Initial\"",
+   "fieldname": "initial_commission",
+   "fieldtype": "Percent",
+   "label": "Initial Commission"
+  },
+  {
+   "depends_on": "eval: doc.contract_type==\"Renewal\"",
+   "fieldname": "renewal_commission",
+   "fieldtype": "Percent",
+   "label": "Renewal Commission"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-10-24 14:42:52.734319",
+ "links": [
+  {
+   "link_doctype": "Tenant Invoice",
+   "link_fieldname": "rental_contract"
+  }
+ ],
+ "modified": "2025-10-25 13:14:07.967723",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Rental Contract",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

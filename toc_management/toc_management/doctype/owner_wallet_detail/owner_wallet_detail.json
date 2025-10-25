@@ -8,6 +8,7 @@
  "field_order": [
   "date",
   "type",
+  "description",
   "column_break_mpsh",
   "amount"
  ],
@@ -37,13 +38,20 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Amount"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-10-24 15:03:31.751545",
+ "modified": "2025-10-25 13:37:33.814872",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Owner Wallet Detail",

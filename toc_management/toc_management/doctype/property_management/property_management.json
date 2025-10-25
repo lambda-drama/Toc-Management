@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:property_id",
+ "creation": "2025-10-25 09:20:57.918406",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "town_property",
+  "property_id",
+  "parent_type",
+  "is_active",
+  "column_break_gahw",
+  "customer",
+  "size_m2",
+  "management_agreement",
+  "section_break_ydfa",
+  "unit_type",
+  "bedrooms",
+  "column_break_hvec",
+  "town_status",
+  "status_type",
+  "section_break_kwrz",
+  "rent_in_adavance",
+  "accomodation_fee",
+  "column_break_qkpt",
+  "deposit_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_gahw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "town_property.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "management_agreement",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Management Agreement"
+  },
+  {
+   "fetch_from": "town_property.size_m2",
+   "fieldname": "size_m2",
+   "fieldtype": "Data",
+   "label": "Size M2"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Is Active"
+  },
+  {
+   "fieldname": "town_property",
+   "fieldtype": "Link",
+   "label": "Town Property",
+   "options": "Town Property",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "town_property.property_id",
+   "fieldname": "property_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "town_property.type",
+   "fieldname": "parent_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Parent Unit Type",
+   "options": "Unit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ydfa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bedrooms",
+   "fieldtype": "Data",
+   "label": "Bedrooms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_hvec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
+   "label": "Unit Type",
+   "options": "Unit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_kwrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_qkpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status_type==\"Long Term\"",
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "town_status",
+   "fieldtype": "Select",
+   "label": "Town Status",
+   "options": "\nManaged\nNot Managed"
+  },
+  {
+   "depends_on": "eval:doc.town_status==\"Managed\"",
+   "fieldname": "status_type",
+   "fieldtype": "Select",
+   "label": "Status Type",
+   "options": "\nLong Term\nShort Term"
+  },
+  {
+   "depends_on": "eval:doc.status_type==\"Long Term\"",
+   "fieldname": "rent_in_adavance",
+   "fieldtype": "Currency",
+   "label": "Rent In Advance"
+  },
+  {
+   "depends_on": "eval:doc.status_type==\"Short Term\"",
+   "fieldname": "accomodation_fee",
+   "fieldtype": "Currency",
+   "label": "Acommodation Fee",
+   "non_negative": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-25 10:10:15.717091",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Property Management",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

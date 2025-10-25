@@ -5,30 +5,19 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "agreement_no",
+  "management_type",
   "customer",
   "column_break_crrf",
   "property",
   "section_break_flog",
   "start_date",
   "end_date",
-  "column_break_dakt",
   "status",
-  "section_break_uifm",
-  "fee_basis",
-  "monthly_fee",
-  "column_break_pywy",
-  "_of_rent"
+  "column_break_dakt",
+  "current_town_management_fee",
+  "current_property_management_fee"
  ],
  "fields": [
-  {
-   "fieldname": "agreement_no",
-   "fieldtype": "Int",
-   "in_list_view": 1,
-   "label": "Agreement No",
-   "non_negative": 1,
-   "reqd": 1
-  },
   {
    "fieldname": "customer",
    "fieldtype": "Link",
@@ -55,14 +44,13 @@
   {
    "fieldname": "start_date",
    "fieldtype": "Date",
-   "label": "Start Date",
-   "reqd": 1
+   "label": "Start Date"
   },
   {
+   "depends_on": "eval: doc.management_type==\"Property Owner & Property Manager\"",
    "fieldname": "end_date",
    "fieldtype": "Date",
-   "label": "End Date",
-   "reqd": 1
+   "label": "End Date"
   },
   {
    "fieldname": "column_break_dakt",
@@ -75,34 +63,30 @@
    "options": "\nActive"
   },
   {
-   "fieldname": "section_break_uifm",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "fee_basis",
+   "fieldname": "management_type",
    "fieldtype": "Select",
-   "label": "Fee Basis",
-   "options": "\nFlat\nTiered\n% of Rent"
+   "label": "Management Type",
+   "options": "\nProperty Manager & Town Manager\nProperty Owner & Property Manager"
   },
   {
-   "fieldname": "monthly_fee",
-   "fieldtype": "Currency",
-   "label": "Monthly Fee"
+   "depends_on": "eval: doc.management_type==\"Property Manager & Town Manager\"",
+   "fieldname": "current_town_management_fee",
+   "fieldtype": "Link",
+   "label": "Current Town Management Fee",
+   "options": "Town Management Fee"
   },
   {
-   "fieldname": "column_break_pywy",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "_of_rent",
-   "fieldtype": "Percent",
-   "label": "% of Rent"
+   "depends_on": "eval: doc.management_type==\"Property Owner & Property Manager\"",
+   "fieldname": "current_property_management_fee",
+   "fieldtype": "Link",
+   "label": "Current Property Management Fee",
+   "options": "Property Management Fee"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-24 13:55:02.529620",
+ "modified": "2025-10-25 10:50:07.603518",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Management Agreement",

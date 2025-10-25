@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ATF-{MM}-{####}",
+ "creation": "2025-10-25 11:12:08.020444",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fee_component",
+  "per_square_meter",
+  "base_amount",
+  "column_break_iisg",
+  "property_factor"
+ ],
+ "fields": [
+  {
+   "fieldname": "fee_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Fee Component",
+   "options": "Annual Fee Components",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_iisg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Base Amount(Sqaure Meter)",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "per_square_meter",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Per Square Meter"
+  },
+  {
+   "fieldname": "property_factor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Property Factor",
+   "options": "Unit Type"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-10-25 11:21:53.073160",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Annual Fee Component Detail",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

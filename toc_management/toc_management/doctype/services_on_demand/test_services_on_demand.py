@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class TestCommissionLedger(FrappeTestCase):
+class TestServicesOnDemand(FrappeTestCase):
 	pass

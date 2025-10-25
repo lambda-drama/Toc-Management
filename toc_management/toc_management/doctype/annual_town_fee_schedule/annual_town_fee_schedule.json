@@ -1,25 +1,23 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:ATF-{MM}-{####}",
  "creation": "2025-10-24 13:59:37.906610",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "fiscal_year",
   "column_break_iisg",
-  "base_amount",
-  "section_break_pvby",
-  "commercial_factor",
-  "per_unit_addon",
-  "column_break_zyop",
-  "residential_factor",
-  "active"
+  "currency",
+  "section_break_uaws",
+  "table_yhrr"
  ],
  "fields": [
   {
    "fieldname": "fiscal_year",
    "fieldtype": "Link",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Fiscal Year",
    "options": "Fiscal Year",
    "reqd": 1
@@ -29,49 +27,30 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "base_amount",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Base Amount",
-   "reqd": 1
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
   },
   {
-   "fieldname": "section_break_pvby",
+   "fieldname": "section_break_uaws",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "commercial_factor",
-   "fieldtype": "Data",
-   "label": "Commercial factor"
-  },
-  {
-   "fieldname": "per_unit_addon",
-   "fieldtype": "Data",
-   "label": "Per Unit Addon"
-  },
-  {
-   "fieldname": "column_break_zyop",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "residential_factor",
-   "fieldtype": "Data",
-   "label": "Residential Factor"
-  },
-  {
-   "default": "0",
-   "fieldname": "active",
-   "fieldtype": "Check",
-   "label": "Active"
+   "fieldname": "table_yhrr",
+   "fieldtype": "Table",
+   "label": "Fee Component",
+   "options": "Annual Fee Component Detail"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-24 14:01:30.513730",
+ "modified": "2025-10-25 11:22:25.698979",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Annual Town Fee Schedule",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
