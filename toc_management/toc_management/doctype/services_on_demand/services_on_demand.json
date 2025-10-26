@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "creation": "2025-10-24 14:02:01.363018",
  "doctype": "DocType",
@@ -157,7 +158,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-25 11:49:48.054194",
+ "modified": "2025-10-26 22:24:12.485390",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Services On Demand",

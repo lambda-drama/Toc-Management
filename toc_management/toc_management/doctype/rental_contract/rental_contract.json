@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:RC-{YY}-{####}",
  "creation": "2025-10-24 14:36:42.172418",
@@ -140,7 +141,7 @@
    "link_fieldname": "rental_contract"
   }
  ],
- "modified": "2025-10-25 13:14:07.967723",
+ "modified": "2025-10-26 22:24:12.116516",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Rental Contract",

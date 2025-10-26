@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:OW-{YY}-{####}",
  "creation": "2025-10-24 15:01:01.971963",
@@ -55,7 +56,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-25 13:39:22.205155",
+ "modified": "2025-10-26 22:24:11.601765",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Owner Wallet",

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:property_id",
  "creation": "2025-10-24 15:24:47.039609",
@@ -72,7 +73,7 @@
    "link_fieldname": "town_property"
   }
  ],
- "modified": "2025-10-26 21:55:07.193420",
+ "modified": "2025-10-26 22:24:11.827383",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Town Property",

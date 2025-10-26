@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:ATF-{MM}-{####}",
  "creation": "2025-10-24 13:59:37.906610",
@@ -46,7 +47,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-25 11:22:25.698979",
+ "modified": "2025-10-26 22:24:13.068422",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Annual Town Fee Schedule",
