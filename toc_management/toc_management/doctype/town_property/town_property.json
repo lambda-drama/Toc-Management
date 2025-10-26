@@ -9,10 +9,8 @@
   "property_id",
   "type",
   "unit_type_parent",
-  "town",
   "column_break_gahw",
-  "customer",
-  "management_agreement",
+  "town",
   "size_m2",
   "is_active"
  ],
@@ -27,15 +25,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Customer",
-   "options": "Customer",
-   "reqd": 1
-  },
-  {
    "fieldname": "column_break_gahw",
    "fieldtype": "Column Break"
   },
@@ -44,13 +33,6 @@
    "fieldname": "is_active",
    "fieldtype": "Check",
    "label": "Is Active"
-  },
-  {
-   "fieldname": "management_agreement",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Management Agreement"
   },
   {
    "fetch_from": "type.parent_unit_type",
@@ -90,7 +72,7 @@
    "link_fieldname": "town_property"
   }
  ],
- "modified": "2025-10-25 09:44:45.466149",
+ "modified": "2025-10-26 21:55:07.193420",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Town Property",
