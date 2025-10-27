@@ -11,13 +11,13 @@
   "parent_type",
   "unit_type",
   "town",
-  "handover_date",
+  "is_active",
   "column_break_gahw",
   "customer",
   "customer_name",
   "size_m2",
-  "management_agreement",
-  "is_active"
+  "handover_date",
+  "management_agreement"
  ],
  "fields": [
   {
@@ -35,15 +35,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "management_agreement",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Management Agreement",
-   "options": "Management Agreement"
-  },
-  {
-   "fetch_from": "town_property.size_m2",
+   "fetch_from": "property_id.size_m2",
    "fieldname": "size_m2",
    "fieldtype": "Data",
    "label": "Size M2"
@@ -98,12 +90,19 @@
    "fieldtype": "Data",
    "label": "Customer Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "management_agreement",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Management Agreement",
+   "options": "Management Agreement"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-27 22:31:37.070724",
+ "modified": "2025-10-27 22:44:26.564418",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Property Ownership",
