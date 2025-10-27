@@ -33,6 +33,7 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Base Amount(Sqaure Meter)",
+   "options": "currency",
    "reqd": 1
   },
   {
@@ -44,8 +45,9 @@
    "label": "Per Square Meter"
   },
   {
+   "default": "1.5",
    "fieldname": "property_factor",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Property Factor",
@@ -56,7 +58,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-10-26 22:24:13.204466",
+ "modified": "2025-10-27 23:09:14.936250",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Annual Fee Component Detail",
