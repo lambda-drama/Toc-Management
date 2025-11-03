@@ -17,7 +17,9 @@
   "customer_name",
   "size_m2",
   "handover_date",
-  "management_agreement"
+  "management_agreement",
+  "section_break_nvqk",
+  "ownership_customers"
  ],
  "fields": [
   {
@@ -101,12 +103,22 @@
    "hidden": 1,
    "label": "Management Agreement",
    "options": "Management Agreement"
+  },
+  {
+   "fieldname": "section_break_nvqk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ownership_customers",
+   "fieldtype": "Table",
+   "label": "Ownership Customers",
+   "options": "Ownership Customers"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-27 22:55:41.938737",
+ "modified": "2025-11-03 20:44:04.327393",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Property Ownership",
