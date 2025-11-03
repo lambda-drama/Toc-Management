@@ -45,7 +45,8 @@
    "fieldname": "contract_type",
    "fieldtype": "Select",
    "label": "Contract Type",
-   "options": "\nPer Sqm\nFixed"
+   "options": "\nPer Sqm\nFixed",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_onic",
@@ -65,22 +66,20 @@
    "fieldname": "ownership_customers",
    "fieldtype": "Table",
    "label": "Ownership Customers",
-   "options": "Ownership Customer Details",
-   "reqd": 1
+   "options": "Ownership Customer Details"
   },
   {
    "fieldname": "annual_town_fee_schedule",
    "fieldtype": "Link",
    "label": "Annual Town Fee Schedule",
-   "options": "Annual Town Fee Schedule",
-   "reqd": 1
+   "options": "Annual Town Fee Schedule"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-03 21:48:19.512572",
+ "modified": "2025-11-03 22:08:21.262243",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Bulk Fee Schedule Assignment",

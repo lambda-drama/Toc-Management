@@ -7,14 +7,17 @@ frappe.ui.form.on("Property Ownership", {
 	},
 	
 	before_save(frm) {
-		// Update customer and customer_name from ownership_customers table on save
-		// This ensures the parent customer is always updated when saving
+		// Update customer, customer_name, and contract_type from ownership_customers table on save
+		// This ensures the parent fields are always updated when saving
 		if (frm.doc.ownership_customers && frm.doc.ownership_customers.length > 0) {
 			// Get the last added customer (newest row)
 			const lastCustomer = frm.doc.ownership_customers[frm.doc.ownership_customers.length - 1];
 			if (lastCustomer.customer) {
 				frm.set_value('customer', lastCustomer.customer);
 				frm.set_value('customer_name', lastCustomer.customer_name);
+			}
+			if (lastCustomer.contract_type) {
+				frm.set_value('contract_type', lastCustomer.contract_type);
 			}
 		}
 	}
@@ -28,6 +31,17 @@ frappe.ui.form.on("Ownership Customers", {
 		if (row.customer) {
 			frm.set_value('customer', row.customer);
 			frm.set_value('customer_name', row.customer_name);
+		}
+		if (row.contract_type) {
+			frm.set_value('contract_type', row.contract_type);
+		}
+	},
+	
+	contract_type(frm, cdt, cdn) {
+		// When contract_type field changes in the table, update parent
+		let row = locals[cdt][cdn];
+		if (row.contract_type) {
+			frm.set_value('contract_type', row.contract_type);
 		}
 	}
 });

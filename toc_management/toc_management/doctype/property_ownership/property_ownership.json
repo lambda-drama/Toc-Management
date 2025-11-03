@@ -12,6 +12,7 @@
   "unit_type",
   "town",
   "is_active",
+  "contract_type",
   "column_break_gahw",
   "customer",
   "customer_name",
@@ -113,12 +114,20 @@
    "fieldtype": "Table",
    "label": "Ownership Customers",
    "options": "Ownership Customers"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Contract Type",
+   "options": "\nPer Sqm\nFixed"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-03 20:44:04.327393",
+ "modified": "2025-11-03 22:17:46.249049",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Property Ownership",

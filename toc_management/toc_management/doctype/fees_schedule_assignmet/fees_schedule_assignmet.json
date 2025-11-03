@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:FSM-{YY}-{#####}",
  "creation": "2025-11-03 21:28:03.872676",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -94,10 +95,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-03 21:47:01.029653",
+ "modified": "2025-11-03 22:22:36.683458",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Fees Schedule Assignmet",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
