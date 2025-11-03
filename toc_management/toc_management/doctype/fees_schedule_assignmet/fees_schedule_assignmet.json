@@ -15,7 +15,8 @@
   "contract_type",
   "column_break_tjky",
   "property",
-  "unit_type"
+  "unit_type",
+  "annual_fee_schedule"
  ],
  "fields": [
   {
@@ -81,12 +82,19 @@
   {
    "fieldname": "section_break_nkck",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "annual_fee_schedule",
+   "fieldtype": "Link",
+   "label": "Annual Fee Schedule",
+   "options": "Annual Town Fee Schedule",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-03 21:39:09.906879",
+ "modified": "2025-11-03 21:47:01.029653",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Fees Schedule Assignmet",

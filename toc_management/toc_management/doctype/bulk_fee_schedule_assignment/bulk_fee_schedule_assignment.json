@@ -13,7 +13,8 @@
   "column_break_onic",
   "town",
   "section_break_wxfy",
-  "ownership_customers"
+  "ownership_customers",
+  "annual_town_fee_schedule"
  ],
  "fields": [
   {
@@ -64,14 +65,22 @@
    "fieldname": "ownership_customers",
    "fieldtype": "Table",
    "label": "Ownership Customers",
-   "options": "Ownership Customer Details"
+   "options": "Ownership Customer Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "annual_town_fee_schedule",
+   "fieldtype": "Link",
+   "label": "Annual Town Fee Schedule",
+   "options": "Annual Town Fee Schedule",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-03 21:44:49.526082",
+ "modified": "2025-11-03 21:48:19.512572",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Bulk Fee Schedule Assignment",
