@@ -1,23 +1,22 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-11-03 20:40:42.568711",
+ "creation": "2025-11-03 21:39:47.537127",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "customer",
   "customer_name",
-  "column_break_uraz",
-  "contract_type",
-  "transfer_date"
+  "column_break_ouwa",
+  "property",
+  "unit_type"
  ],
  "fields": [
   {
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
-   "in_standard_filter": 1,
    "label": "Customer",
    "options": "Customer",
    "reqd": 1
@@ -31,38 +30,39 @@
    "label": "Customer Name"
   },
   {
-   "fieldname": "column_break_uraz",
+   "fieldname": "column_break_ouwa",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "transfer_date",
-   "fieldtype": "Date",
+   "fieldname": "property",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Transfer Date"
+   "label": "Property",
+   "options": "Property Ownership",
+   "reqd": 1
   },
   {
-   "default": "Per Sqm",
-   "fieldname": "contract_type",
-   "fieldtype": "Select",
+   "fetch_from": "property.unit_type",
+   "fieldname": "unit_type",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Contract Type",
-   "options": "\nPer Sqm\nFixed",
-   "reqd": 1
+   "label": "Unit Type",
+   "options": "Unit Type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-11-03 21:19:27.324470",
+ "modified": "2025-11-03 21:44:20.577823",
  "modified_by": "Administrator",
  "module": "Toc Management",
- "name": "Ownership Customers",
+ "name": "Ownership Customer Details",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
