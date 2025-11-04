@@ -67,13 +67,8 @@
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "link_doctype": "Property Management",
-   "link_fieldname": "town_property"
-  }
- ],
- "modified": "2025-10-26 22:24:11.827383",
+ "links": [],
+ "modified": "2025-11-04 20:18:08.200028",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Town Property",
