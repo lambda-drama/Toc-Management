@@ -47,7 +47,7 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-doctype_js = {"Company" : "public/js/company.js"}
+# doctype_js = {"Company" : "public/js/company.js"}
 
 # Svg Icons
 # ------------------

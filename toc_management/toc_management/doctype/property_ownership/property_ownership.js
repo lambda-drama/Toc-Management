@@ -3,25 +3,6 @@
 
 frappe.ui.form.on("Property Ownership", {
 	refresh(frm) {
-		// Add button to copy main customer to child table if table is empty
-		if (frm.doc.customer &&
-			(!frm.doc.ownership_customers || frm.doc.ownership_customers.length === 0)) {
-			frm.add_custom_button(__("Add Customer"), function() {
-				// Add customer from main doctype to child table
-				let child = frm.add_child("ownership_customers");
-				child.customer = frm.doc.customer;
-				child.customer_name = frm.doc.customer_name || frm.doc.customer;
-				if (frm.doc.contract_type) {
-					child.contract_type = frm.doc.contract_type;
-				}
-				frm.refresh_field("ownership_customers");
-				frappe.show_alert({
-					message: __("Customer added to Ownership Customers table"),
-					indicator: "green"
-				});
-			}, __("Actions"));
-		}
-
 		// Add button to bulk update all Property Ownership records
 		frm.add_custom_button(__("Update All Property Ownership"), function() {
 			frappe.confirm(
