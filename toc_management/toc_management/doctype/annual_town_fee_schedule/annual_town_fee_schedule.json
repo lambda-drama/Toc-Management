@@ -2,7 +2,7 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:ATF-{MM}-{####}",
+ "autoname": "prompt",
  "creation": "2025-10-24 13:59:37.906610",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -49,11 +49,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-27 23:12:16.172654",
+ "modified": "2025-11-04 20:47:09.847399",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Annual Town Fee Schedule",
- "naming_rule": "Expression",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {

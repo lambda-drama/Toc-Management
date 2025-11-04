@@ -17,7 +17,8 @@
   "column_break_tjky",
   "property",
   "unit_type",
-  "annual_fee_schedule"
+  "annual_fee_schedule",
+  "size_m2"
  ],
  "fields": [
   {
@@ -90,12 +91,18 @@
    "label": "Annual Fee Schedule",
    "options": "Annual Town Fee Schedule",
    "reqd": 1
+  },
+  {
+   "fetch_from": "property.size_m2",
+   "fieldname": "size_m2",
+   "fieldtype": "Data",
+   "label": "Size M2"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-03 22:22:36.683458",
+ "modified": "2025-11-04 21:36:04.326460",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Fees Schedule Assignmet",
