@@ -21,6 +21,23 @@ app_license = "mit"
 # 	}
 # ]
 
+
+fixtures = [
+	{
+		"doctype": "Custom Field",
+		"filters": [
+			[
+				"name",
+				"in",
+				(
+					"Sales Invoice-custom_annual_town_fee_run"
+				),
+			]
+		],
+	},
+]
+
+
 # Includes in <head>
 # ------------------
 
