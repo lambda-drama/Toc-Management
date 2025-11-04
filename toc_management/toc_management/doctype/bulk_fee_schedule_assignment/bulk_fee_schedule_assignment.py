@@ -30,7 +30,6 @@ def get_customers(contract_type, town=None):
 	
 	result = []
 	for prop in properties:
-		# Get customer name if not already available
 		if not prop.customer_name and prop.customer:
 			customer_name = frappe.db.get_value("Customer", prop.customer, "customer_name")
 			prop.customer_name = customer_name
@@ -48,7 +47,6 @@ def get_customers(contract_type, town=None):
 @frappe.whitelist()
 def bulk_assignment(start_date, end_date, annual_town_fee_schedule, ownership_customers):
 	"""Create Fees Schedule Assignment for each customer in ownership_customers table"""
-	# Parse JSON string if it's a string
 	if isinstance(ownership_customers, str):
 		ownership_customers = frappe.parse_json(ownership_customers)
 	
