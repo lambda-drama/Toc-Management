@@ -30,11 +30,14 @@ fixtures = [
 				"name",
 				"in",
 				(
-					"Sales Invoice-custom_annual_town_fee_run"
+					"Sales Invoice-custom_annual_town_fee_run",
+                    "Customer-custom_is_tenant"
 				),
 			]
 		],
 	},
+ 
+ {"doctype": "Custom HTML Block", "filters": [["name", "in", ["Line Separator"]]]},
 ]
 
 

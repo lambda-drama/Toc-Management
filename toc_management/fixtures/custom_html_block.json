@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom HTML Block",
+  "html": "<hr style=\"border: none; height: 2px; background-color: #0000FF;\" />\n",
+  "modified": "2025-11-05 22:34:14.138940",
+  "name": "Line Separator",
+  "private": 0,
+  "roles": [],
+  "script": null,
+  "style": null
+ }
+]
