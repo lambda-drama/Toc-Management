@@ -1,0 +1,104 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"7pz3ykDbCQ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Town Management</span>\",\"col\":12}},{\"id\":\"uR8LHUXtf_\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Town Properties\",\"col\":4}},{\"id\":\"dJyXMGEy6K\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Property Ownership\",\"col\":4}},{\"id\":\"jxbthaz3XH\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Property Owners\",\"col\":4}},{\"id\":\"0V1y7rKWQ8\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Line Separator\",\"col\":12}},{\"id\":\"7KGTBSjcda\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>ShortCuts</b></span>\",\"col\":12}},{\"id\":\"KFvZC7TwGS\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Town Property\",\"col\":3}},{\"id\":\"8kdr3N_nSI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Property Ownership\",\"col\":3}},{\"id\":\"VWNzqNQYji\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Annual Fee Components\",\"col\":3}},{\"id\":\"qQf4AA8lnH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Type\",\"col\":3}},{\"id\":\"m9ymUN8Pls\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Annual Town Fee Schedule\",\"col\":3}},{\"id\":\"-4ioDK50-K\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Annual Fee Components\",\"col\":3}},{\"id\":\"9AydIAQQZf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Annual Town Fee Run\",\"col\":3}},{\"id\":\"Ibzq9EXm_2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Fees Schedule Assignment\",\"col\":3}},{\"id\":\"rbaCDZQ_Oo\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Line Separator\",\"col\":12}}]",
+ "creation": "2025-11-05 22:24:10.410004",
+ "custom_blocks": [
+  {
+   "custom_block_name": "Line Separator",
+   "label": "Line Separator"
+  }
+ ],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-review-points",
+ "idx": 0,
+ "indicator_color": "light-blue",
+ "is_hidden": 0,
+ "label": "Town Management",
+ "links": [],
+ "modified": "2025-11-05 23:10:23.809458",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Town Management",
+ "number_cards": [
+  {
+   "label": "Town Properties",
+   "number_card_name": "Town Properties"
+  },
+  {
+   "label": "Property Ownership",
+   "number_card_name": "Property Ownership"
+  },
+  {
+   "label": "Property Owners",
+   "number_card_name": "Property Owners"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Town Property",
+   "link_to": "Town Property",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Annual Town Fee Schedule",
+   "link_to": "Annual Town Fee Schedule",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Property Ownership",
+   "link_to": "Property Ownership",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Annual Fee Components",
+   "link_to": "Annual Fee Components",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Annual Town Fee Run",
+   "link_to": "Annual Town Fee Run",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Unit Type",
+   "link_to": "Unit Type",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Fees Schedule Assignment",
+   "link_to": "Fees Schedule Assignmet",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Town Management"
+}
