@@ -168,7 +168,6 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 					"items": []
 				})
 				
-				# Add items from fee components
 				for component_detail in fee_schedule.table_yhrr:
 					# Get component name
 					component_name = frappe.db.get_value(
