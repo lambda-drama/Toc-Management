@@ -78,9 +78,8 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 				"start_date": ["<=", fee_run.end_date],
 				"end_year": [">=", fee_run.start_date]
 			},
-			fields=["name", "customer", "customer_name", "property", "annual_fee_schedule", "size_m2"]
+			fields=["name", "customer", "customer_name", "property", "annual_fee_schedule", "size_m2", "cost_center"]
 		)
-		
 		if not assignments:
 			return {
 				"status": "success",
@@ -93,6 +92,26 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 		
 		for assignment in assignments:
 			try:
+				# Get handover_date and contract_type from Property Ownership
+				property_data = frappe.db.get_value(
+					"Property Ownership",
+					assignment.property,
+					["handover_date", "contract_type"],
+					as_dict=True
+				)
+				
+				if not property_data:
+					errors.append(f"Property {assignment.property} not found")
+					continue
+				
+				handover_date = property_data.get("handover_date")
+				contract_type = property_data.get("contract_type") or ""
+				
+				# Scenario 1: Skip invoice if handover_date is after financial year end date
+				if handover_date and getdate(handover_date) > getdate(fee_run.end_date):
+					# Skip this assignment - don't create invoice
+					continue
+				
 				# Get the Annual Town Fee Schedule
 				if not assignment.annual_fee_schedule:
 					errors.append(f"Assignment {assignment.name} has no Annual Fee Schedule")
@@ -110,6 +129,24 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 				if size_m2 == 0:
 					# Try to get from property ownership
 					size_m2 = flt(frappe.db.get_value("Property Ownership", assignment.property, "size_m2")) or 0
+				
+				# Determine if we need proration
+				# Scenario 2: Handover before or equal to financial year start - use full year
+				# Scenario 3: Handover within financial year - apply proration
+				needs_proration = False
+				proration_factor = 1.0
+				
+				if handover_date:
+					handover_dt = getdate(handover_date)
+					start_dt = getdate(fee_run.start_date)
+					end_dt = getdate(fee_run.end_date)
+					
+					# If handover is within the financial year (between start_date and end_date)
+					if handover_dt > start_dt and handover_dt <= end_dt:
+						needs_proration = True
+						# Calculate proration: (12 - MONTH(handover_date) + 1) / 12
+						handover_month = handover_dt.month
+						proration_factor = (12 - handover_month + 1) / 12
 				
 				# Get currency from fee schedule, default to company currency
 				currency = fee_schedule.currency
@@ -149,16 +186,30 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 					else:
 						quantity = 1
 					
-					# Get rate (base_amount)
-					rate = flt(component_detail.base_amount) or 0
+					# Get base rate (base_amount)
+					base_rate = flt(component_detail.base_amount) or 0
+					
+					# Apply proration if handover is within financial year
+					# Proration formula: base_rate * (12 - handover_month + 1) / 12
+					# This applies to both Fixed and Per Sqm components
+					rate = base_rate
+					if needs_proration and base_rate > 0:
+						rate = base_rate * proration_factor
 					
 					# Add item to invoice
-					sales_invoice.append("items", {
+					item_data = {
 						"item_code": item_code,
 						"qty": quantity,
 						"rate": rate,
-						"description": f"{component_name} - {assignment.property}"
-					})
+						"description": f"{component_name} - {assignment.property}",
+						"custom_standard_rate": base_rate  # Store original rate from schedule
+					}
+					
+					# Add cost_center from assignment if available
+					if assignment.cost_center:
+						item_data["cost_center"] = assignment.cost_center
+					
+					sales_invoice.append("items", item_data)
 				
 				# Only create invoice if there are items
 				if len(sales_invoice.items) > 0:

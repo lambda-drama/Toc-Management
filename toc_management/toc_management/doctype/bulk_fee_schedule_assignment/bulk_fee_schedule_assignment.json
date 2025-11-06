@@ -14,7 +14,10 @@
   "town",
   "section_break_wxfy",
   "ownership_customers",
-  "annual_town_fee_schedule"
+  "section_break_eqlf",
+  "annual_town_fee_schedule",
+  "column_break_mnxs",
+  "cost_center"
  ],
  "fields": [
   {
@@ -73,13 +76,27 @@
    "fieldtype": "Link",
    "label": "Annual Town Fee Schedule",
    "options": "Annual Town Fee Schedule"
+  },
+  {
+   "fieldname": "section_break_eqlf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_mnxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-03 22:08:21.262243",
+ "modified": "2025-11-06 20:42:18.954368",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Bulk Fee Schedule Assignment",

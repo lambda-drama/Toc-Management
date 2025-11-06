@@ -80,7 +80,8 @@
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "HandOver Date"
+   "label": "HandOver Date",
+   "reqd": 1
   },
   {
    "fetch_from": "property_id.town",
@@ -127,7 +128,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-03 22:17:46.249049",
+ "modified": "2025-11-06 21:39:56.253338",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Property Ownership",

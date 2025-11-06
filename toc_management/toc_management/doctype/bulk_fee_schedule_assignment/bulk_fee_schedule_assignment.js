@@ -52,14 +52,15 @@ frappe.ui.form.on("Bulk Fee Schedule Assignment", {
 						[frm.doc.ownership_customers.length]),
 					function() {
 						// Yes
-						frappe.call({
-							method: "toc_management.toc_management.doctype.bulk_fee_schedule_assignment.bulk_fee_schedule_assignment.bulk_assignment",
-							args: {
-								start_date: frm.doc.start_date,
-								end_date: frm.doc.end_date,
-								annual_town_fee_schedule: frm.doc.annual_town_fee_schedule,
-								ownership_customers: frm.doc.ownership_customers
-							},
+					frappe.call({
+						method: "toc_management.toc_management.doctype.bulk_fee_schedule_assignment.bulk_fee_schedule_assignment.bulk_assignment",
+						args: {
+							start_date: frm.doc.start_date,
+							end_date: frm.doc.end_date,
+							annual_town_fee_schedule: frm.doc.annual_town_fee_schedule,
+							ownership_customers: frm.doc.ownership_customers,
+							cost_center: frm.doc.cost_center || null
+						},
 							callback: function(r) {
 								if (r.message) {
 									frappe.show_alert({

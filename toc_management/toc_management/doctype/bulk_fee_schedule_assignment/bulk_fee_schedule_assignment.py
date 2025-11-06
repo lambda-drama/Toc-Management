@@ -45,7 +45,7 @@ def get_customers(contract_type, town=None):
 
 
 @frappe.whitelist()
-def bulk_assignment(start_date, end_date, annual_town_fee_schedule, ownership_customers):
+def bulk_assignment(start_date, end_date, annual_town_fee_schedule, ownership_customers, cost_center=None):
 	"""Create Fees Schedule Assignment for each customer in ownership_customers table"""
 	if isinstance(ownership_customers, str):
 		ownership_customers = frappe.parse_json(ownership_customers)
@@ -90,7 +90,7 @@ def bulk_assignment(start_date, end_date, annual_town_fee_schedule, ownership_cu
 			contract_type = frappe.db.get_value("Property Ownership", property_name, "contract_type")
 			
 			# Create new Fees Schedule Assignment
-			doc = frappe.get_doc({
+			doc_data = {
 				"doctype": "Fees Schedule Assignmet",
 				"customer": customer,
 				"customer_name": customer_name,
@@ -100,7 +100,13 @@ def bulk_assignment(start_date, end_date, annual_town_fee_schedule, ownership_cu
 				"start_date": start_date,
 				"end_year": end_date,
 				"annual_fee_schedule": annual_town_fee_schedule
-			})
+			}
+			
+			# Add cost_center if provided
+			if cost_center:
+				doc_data["cost_center"] = cost_center
+			
+			doc = frappe.get_doc(doc_data)
 			
 			doc.insert(ignore_permissions=True)
 			created_count += 1
