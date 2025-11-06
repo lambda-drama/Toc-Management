@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
-from frappe.utils import flt, getdate
+from frappe.utils import flt, getdate, today, add_days
 
 
 class AnnualTownFeeRun(Document):
@@ -153,12 +153,16 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 				if not currency:
 					currency = frappe.db.get_value("Company", frappe.defaults.get_user_default("Company"), "default_currency")
 				
+				# Set posting date to today and due date to 30 days from today
+				posting_date = today()
+				due_date = add_days(today(), 30)
+				
 				# Create Sales Invoice in draft
 				sales_invoice = frappe.get_doc({
 					"doctype": "Sales Invoice",
 					"customer": assignment.customer,
-					"posting_date": fee_run.start_date,
-					"due_date": fee_run.end_date,
+					"posting_date": posting_date,
+					"due_date": due_date,
 					"currency": currency,
 					"custom_annual_town_fee_run": fee_run_name,
 					"items": []
