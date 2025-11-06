@@ -31,7 +31,8 @@ fixtures = [
 				"in",
 				(
 					"Sales Invoice-custom_annual_town_fee_run",
-                    "Customer-custom_is_tenant"
+                    "Customer-custom_is_tenant",
+                    "Sales Invoice Item-custom_standard_rate"
 				),
 			]
 		],
