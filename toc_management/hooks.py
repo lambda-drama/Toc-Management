@@ -32,7 +32,8 @@ fixtures = [
 				(
 					"Sales Invoice-custom_annual_town_fee_run",
                     "Customer-custom_is_tenant",
-                    "Sales Invoice Item-custom_standard_rate"
+                    "Sales Invoice Item-custom_standard_rate",
+                    "Sales Invoice-custom_fees_schedule"
 				),
 			]
 		],
@@ -159,13 +160,11 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Sales Invoice": {
+		"validate": "toc_management.toc_management.doctype.sales_invoice_validation.validate_fees_schedule_assignment"
+	}
+}
 
 # Scheduled Tasks
 # ---------------

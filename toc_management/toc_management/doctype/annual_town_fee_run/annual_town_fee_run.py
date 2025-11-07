@@ -92,6 +92,20 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 		
 		for assignment in assignments:
 			try:
+				# Validation: Check if invoice already exists for this fees schedule assignment
+				# This prevents duplicate invoices for the same ownership and duration
+				existing_invoice = frappe.db.exists(
+					"Sales Invoice",
+					{
+						"custom_fees_schedule": assignment.name,
+						"docstatus": ["<", 2]  # Draft (0) or Submitted (1), exclude Cancelled (2)
+					}
+				)
+				
+				if existing_invoice:
+					# Skip creating duplicate invoice - one already exists for this assignment
+					continue
+				
 				# Get handover_date and contract_type from Property Ownership
 				property_data = frappe.db.get_value(
 					"Property Ownership",
@@ -165,6 +179,7 @@ def create_sales_invoices_from_fee_run(fee_run_name):
 					"due_date": due_date,
 					"currency": currency,
 					"custom_annual_town_fee_run": fee_run_name,
+					"custom_fees_schedule": assignment.name,
 					"items": []
 				})
 				
