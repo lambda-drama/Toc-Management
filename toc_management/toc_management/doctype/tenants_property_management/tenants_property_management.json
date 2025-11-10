@@ -3,7 +3,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:property_id",
- "creation": "2025-10-27 22:29:26.281498",
+ "creation": "2025-11-10 21:47:23.334159",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -12,7 +12,6 @@
   "parent_type",
   "town",
   "agreement_date",
-  "unit_type",
   "column_break_gahw",
   "customer",
   "customer_name",
@@ -20,10 +19,26 @@
   "management_agreement",
   "is_active",
   "handback_date",
+  "section_break_ydfa",
+  "unit_type",
+  "status_type",
+  "column_break_hvec",
+  "section_break_kwrz",
+  "rent_in_adavance",
+  "accomodation_fee",
+  "column_break_qkpt",
+  "deposit_amount",
   "tenants_section",
   "tenants_history"
  ],
  "fields": [
+  {
+   "fieldname": "property_ownership",
+   "fieldtype": "Link",
+   "label": "Property Ownership",
+   "options": "Property Ownership",
+   "reqd": 1
+  },
   {
    "fetch_from": "property_ownership.property_id",
    "fieldname": "property_id",
@@ -49,6 +64,11 @@
    "fieldtype": "Link",
    "label": "Town",
    "options": "Location"
+  },
+  {
+   "fieldname": "agreement_date",
+   "fieldtype": "Date",
+   "label": "Agreement Date"
   },
   {
    "fieldname": "column_break_gahw",
@@ -82,7 +102,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Contract Reference",
+   "label": "Management Agreement",
    "options": "Management Agreement"
   },
   {
@@ -92,11 +112,59 @@
    "label": "Is Active"
   },
   {
+   "depends_on": "eval: doc.is_active==0",
+   "fieldname": "handback_date",
+   "fieldtype": "Date",
+   "label": "Handback Date"
+  },
+  {
+   "fieldname": "section_break_ydfa",
+   "fieldtype": "Section Break"
+  },
+  {
    "fetch_from": "property_id.type",
    "fieldname": "unit_type",
    "fieldtype": "Link",
    "label": "Unit Type",
    "options": "Unit Type"
+  },
+  {
+   "depends_on": "eval:doc.town_status==\"Managed\"",
+   "fieldname": "status_type",
+   "fieldtype": "Select",
+   "label": "Status Type",
+   "options": "\nLong Term\nShort Term"
+  },
+  {
+   "fieldname": "column_break_hvec",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kwrz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.status_type==\"Long Term\"",
+   "fieldname": "rent_in_adavance",
+   "fieldtype": "Currency",
+   "label": "Rent In Advance"
+  },
+  {
+   "depends_on": "eval:doc.status_type==\"Short Term\"",
+   "fieldname": "accomodation_fee",
+   "fieldtype": "Currency",
+   "label": "Acommodation Fee",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_qkpt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.status_type==\"Long Term\"",
+   "fieldname": "deposit_amount",
+   "fieldtype": "Currency",
+   "label": "Deposit Amount"
   },
   {
    "fieldname": "tenants_section",
@@ -108,33 +176,15 @@
    "fieldtype": "Table",
    "label": "Tenants History",
    "options": "Property Management Tenants"
-  },
-  {
-   "fieldname": "property_ownership",
-   "fieldtype": "Link",
-   "label": "Property Ownership",
-   "options": "Property Ownership",
-   "reqd": 1
-  },
-  {
-   "fieldname": "agreement_date",
-   "fieldtype": "Date",
-   "label": "Agreement Date"
-  },
-  {
-   "depends_on": "eval: doc.is_active==0",
-   "fieldname": "handback_date",
-   "fieldtype": "Date",
-   "label": "Handback Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-10 21:49:28.249039",
+ "modified": "2025-11-10 21:47:23.334159",
  "modified_by": "Administrator",
  "module": "Toc Management",
- "name": "Property Management",
+ "name": "Tenants Property Management",
  "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [

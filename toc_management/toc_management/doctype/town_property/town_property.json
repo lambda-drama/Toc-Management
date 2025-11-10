@@ -10,7 +10,7 @@
   "property_id",
   "type",
   "unit_type_parent",
-  "cost",
+  "construction_cost",
   "column_break_gahw",
   "town",
   "size_m2",
@@ -66,15 +66,15 @@
    "reqd": 1
   },
   {
-   "fieldname": "cost",
+   "fieldname": "construction_cost",
    "fieldtype": "Currency",
-   "label": "Cost"
+   "label": "Construction Cost"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-10 20:59:01.701892",
+ "modified": "2025-11-10 21:49:47.939678",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Town Property",
