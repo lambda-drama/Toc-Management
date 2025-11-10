@@ -7,10 +7,11 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "property_ownership",
   "property_id",
   "parent_type",
   "town",
-  "handover_date",
+  "agreement_date",
   "column_break_gahw",
   "customer",
   "customer_name",
@@ -26,10 +27,13 @@
   "rent_in_adavance",
   "accomodation_fee",
   "column_break_qkpt",
-  "deposit_amount"
+  "deposit_amount",
+  "tenants_section",
+  "tenants_history"
  ],
  "fields": [
   {
+   "fetch_from": "property_ownership.property_id",
    "fieldname": "property_id",
    "fieldtype": "Link",
    "label": "Property ID",
@@ -55,33 +59,28 @@
    "options": "Location"
   },
   {
-   "fieldname": "handover_date",
-   "fieldtype": "Date",
-   "label": "HandOver Date"
-  },
-  {
    "fieldname": "column_break_gahw",
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "town_property.customer",
+   "fetch_from": "property_ownership.customer",
    "fieldname": "customer",
    "fieldtype": "Link",
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Customer",
+   "label": "Property Owner",
    "options": "Customer",
    "reqd": 1
   },
   {
-   "fetch_from": "customer.customer_name",
+   "fetch_from": "property_ownership.customer_name",
    "fieldname": "customer_name",
    "fieldtype": "Data",
-   "label": "Customer Name",
+   "label": "Property Owner Name",
    "read_only": 1
   },
   {
-   "fetch_from": "town_property.size_m2",
+   "fetch_from": "property_id.size_m2",
    "fieldname": "size_m2",
    "fieldtype": "Data",
    "label": "Size M2"
@@ -109,8 +108,7 @@
    "fieldname": "unit_type",
    "fieldtype": "Link",
    "label": "Unit Type",
-   "options": "Unit Type",
-   "reqd": 1
+   "options": "Unit Type"
   },
   {
    "depends_on": "eval:doc.town_status==\"Managed\"",
@@ -155,12 +153,35 @@
    "fieldname": "deposit_amount",
    "fieldtype": "Currency",
    "label": "Deposit Amount"
+  },
+  {
+   "fieldname": "tenants_section",
+   "fieldtype": "Section Break",
+   "label": "Tenants"
+  },
+  {
+   "fieldname": "tenants_history",
+   "fieldtype": "Table",
+   "label": "Tenants History",
+   "options": "Property Management Tenants"
+  },
+  {
+   "fieldname": "property_ownership",
+   "fieldtype": "Link",
+   "label": "Property Ownership",
+   "options": "Property Ownership",
+   "reqd": 1
+  },
+  {
+   "fieldname": "agreement_date",
+   "fieldtype": "Date",
+   "label": "Agreement Date"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-10-27 22:29:26.281498",
+ "modified": "2025-11-10 21:30:22.751790",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Property Management",
