@@ -21,6 +21,7 @@
   "is_active",
   "handback_date",
   "tenants_section",
+  "column_break_jkvi",
   "tenants_history"
  ],
  "fields": [
@@ -127,12 +128,17 @@
    "fieldname": "handback_date",
    "fieldtype": "Date",
    "label": "Handback Date"
+  },
+  {
+   "fieldname": "column_break_jkvi",
+   "fieldtype": "Column Break",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-10 22:00:55.138508",
+ "modified": "2025-11-10 22:02:49.977038",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Property Management",
