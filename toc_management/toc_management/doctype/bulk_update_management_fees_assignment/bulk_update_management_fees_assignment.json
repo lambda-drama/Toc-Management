@@ -43,6 +43,7 @@
    "options": "Cost Center"
   },
   {
+   "allow_bulk_edit": 1,
    "fieldname": "unit_type",
    "fieldtype": "Table",
    "label": "Unit Type",
@@ -59,7 +60,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-11 21:06:28.822092",
+ "modified": "2025-11-11 22:21:09.497154",
  "modified_by": "Administrator",
  "module": "Toc Management",
  "name": "Bulk Update Management Fees Assignment",
