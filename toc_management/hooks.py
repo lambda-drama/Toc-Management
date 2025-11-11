@@ -33,7 +33,8 @@ fixtures = [
 					"Sales Invoice-custom_annual_town_fee_run",
                     "Customer-custom_is_tenant",
                     "Sales Invoice Item-custom_standard_rate",
-                    "Sales Invoice-custom_fees_schedule"
+                    "Sales Invoice-custom_fees_schedule",
+                    "Sales Invoice-custom_monthly_pm_fee_run"
 				),
 			]
 		],
