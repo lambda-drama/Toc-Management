@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-11 21:00:36.743166",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unity_type",
+  "monthly_fees",
+  "column_break_kunx",
+  "parent_unit_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "unity_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unity Type",
+   "options": "Unit Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "parent_unit_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Parent Unit Type",
+   "options": "Unit Type"
+  },
+  {
+   "fieldname": "column_break_kunx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_fees",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Monthly Fees",
+   "options": "currency"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-11 21:12:13.815504",
+ "modified_by": "Administrator",
+ "module": "Toc Management",
+ "name": "Unit Type Fees Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
